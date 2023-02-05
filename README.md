@@ -8,9 +8,12 @@ React is a **component-based** JavaScript library for building user interfaces. 
 
 DOM stands for Document Object Model. Its a tree like structure that represents the all nodes in the HTML document. React uses something called Virtual DOM to update Real DOM efficiently. Whenever the state of application changed React create a Virtual DOM with updated state and compares it with previous Virtual DOM and then sync it with Real DOM efficiently this process of comparision and updating the Real DOM is also known as **Diffing**. And the algorithm that is used to compare DOMs is **Diffing Algorithm.**
 
-## How to add React in a web page
+## Add React
 
-To add React in a web page **react** and **react-dom** library is required. **react** contains all required APIs and **react-dom** is renderer that talks to web page's DOM.
+To add React in a web page **react** and **react-dom** library is required.
+
+- **react.development.js** lets you define React component
+- **react-dom.development.js** lets React render HTML element to DOM.
 
 ## React.createElement(type, props?, children?)
 
@@ -19,14 +22,14 @@ const App = () => {
   return React.createElement(
     "div",
     {},
-    React.createElement("h1", {}, "Adopt Me!")
+    React.createElement("h1", {}, "Hello world!")
   );
 };
 ```
 
 ## React.createRoot(container, options?)
 
-**React 18 supports concurrent UI patterns which allows to load data for next screen before hand**. `ReactDOM.render` does not support concurrent UI to use concurrent UI `ReactDOM.createRoot` is required.
+**React 18 supports concurrency that helps with state update prioritazation**. `ReactDOM.render` does not support concurrency to use concurrency `ReactDOM.createRoot` is required.
 
 ```js
 const container = document.getElementbyId("root");
