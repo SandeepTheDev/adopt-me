@@ -37,7 +37,7 @@ const root = ReactDOM.createRoot(container);
 root.render(React.createElement(App));
 ```
 
-## Unidirectional data flow
+# Unidirectional data flow
 
 React uses unidirectional data flow, means data can only be transfered from parent to child not vice versa (data from the parent is known as **props**). This means that the child component cannot update or modify the data on their own.
 
@@ -45,3 +45,15 @@ React uses unidirectional data flow, means data can only be transfered from pare
  
 - **Debugging** It is easy to debug for a developer when data is going in one direction only.
 - **Less error prone** its less error prone because child component cannot affect parent component on thier own.
+
+# JSX
+
+JSX is a way to describe what the UI should look like by using HTML like syntax instead of using `React.createElement`. JSX allows to use any valid JavaScript expression inside the curly braces.
+
+### Difference between HTML and JSX
+
+- JSX can have only single parent element.
+- All tags in JSX are self closing type.
+- `className` and `htmlFor` instead of `class` and `for` attributes.
+- Inline styling.
+- JavaScript inside JSX using curly braces.
