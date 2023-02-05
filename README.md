@@ -57,3 +57,17 @@ JSX is a way to describe what the UI should look like by using HTML like syntax 
 - `className` and `htmlFor` instead of `class` and `for` attributes.
 - Inline styling.
 - JavaScript inside JSX using curly braces.
+
+# Hooks
+
+Hooks is a speacial functions thats let you **hook into** React features. **Hooks cannot be called conditionally or inside loop**.
+
+## State hook `useState`
+
+`useState` is a hook that lets you add React state to function components.
+
+```js
+const locationHook = useState(""); // this will return an array
+const location = locationHook[0];
+const setLocation = locationHook[1];
+```
