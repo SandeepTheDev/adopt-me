@@ -1,4 +1,4 @@
-# What is React
+# React Introduction
 
 React is a **component-based** JavaScript library for building user interfaces. **Component is a piece of UI that manage its own state**, then compose them to make complex UIs. 
 
@@ -71,3 +71,7 @@ const locationHook = useState(""); // this will return an array
 const location = locationHook[0];
 const setLocation = locationHook[1];
 ```
+
+## Effect hook `useEffect`
+
+The effect hook lets you perform side effects in functional component. Effect happens after render, React guarantees the DOM has been updated by the time it runs the effects. **By default it runs both after the first render and after every update** `useEffect` can be customize by giving dependencies array.
