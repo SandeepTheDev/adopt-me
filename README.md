@@ -123,3 +123,20 @@ return (
 # Error Boundaries
 
 Error Boundaries is a React class component that catch Errors anywhere in their child component and display a fallback UI.
+
+# Portals
+
+Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
+
+👉 Portals behaves like a normal React child everything work exactly the same like **context**, **event fired inside a portal will propogate regardless of its position in DOM tree** exactly the same.
+
+```js
+<html>
+  <body>
+    <div id="portal"></div>
+    <div id="root"></div>
+  </body>
+</html>
+```
+
+A Parent component in #root would be able to catch an uncaught, bubbling event from the sibling node #portal.
