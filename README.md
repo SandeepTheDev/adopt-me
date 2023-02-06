@@ -1,6 +1,6 @@
 # React Introduction
 
-React is a **component-based** JavaScript library for building user interfaces. **Component is a piece of UI that manage its own state**, then compose them to make complex UIs. 
+React is a **component-based** JavaScript library for building user interfaces. **Component is a piece of UI that manage its own state**, then compose them to make complex UIs.
 
 👉 **React will efficiently update and render just the right components whenever the state change**.
 
@@ -46,7 +46,7 @@ root.render(React.createElement(App));
 React uses unidirectional data flow, means data can only be transfered from parent to child not vice versa (data from the parent is known as **props**). This means that the child component cannot update or modify the data on their own.
 
 ### Advantages of unidirectional flow
- 
+
 - **Debugging** It is easy to debug for a developer when data is going in one direction only.
 - **Less error prone** its less error prone because child component cannot affect parent component on thier own.
 
@@ -86,6 +86,36 @@ Smaller components are easier to read, easier to understand and easier to test. 
 
 # Strict Mode
 
-React has a new strict mode by wrapping React app with <React.StrictMode> it log additional warnings about legacy features or things that will be soon be deprecated. 
+React has a new strict mode by wrapping React app with <React.StrictMode> it log additional warnings about legacy features or things that will be soon be deprecated.
 
 👉 StrictMode renders components twice (on dev but not production) in order to detect any problems with your code and warn you about them (which can be quite useful).
+
+# Controlled form vs Uncontrolled form
+
+In controlled form we keep track state for each input fields this is not a good practice because the only time we ever really use these information is on submit.
+
+```js
+const [requesParams, setRequestParams] = useState({
+  location: "",
+  animal: "",
+});
+
+const onSubmit = (e) => {
+  const formData = new FormData(e.target);
+  const obj = {
+    location: formData.get("location") || "",
+    animal: formData.get("animal") || "",
+  };
+  setRequestParams(obj);
+};
+
+return (
+  <form onSubmit={onSubmit}>
+    <label htmlFor="location">Location</label>
+    <input name="location" id="location" placeholder="location" />
+    <label htmlFor="animal">Animal</label>
+    <input name="animal" id="animal" placeholder="animal" />
+    <button>Submit</button>
+  </form>
+);
+```
