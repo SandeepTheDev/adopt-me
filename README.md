@@ -15,6 +15,10 @@ To add React in a web page **react** and **react-dom** library is required.
 - **react.development.js** lets you define React component
 - **react-dom.development.js** lets React render HTML element to DOM.
 
+👉 development build has more helpful error message which makes it slow for production ready build replace `development.js` with `production.min.js`.
+
+Bundlers like parcel, vite handles it automatically but for webpack NODE_ENV=production must be configured while creating production ready build of React app.
+
 ### React.createElement(type, props?, children?)
 
 ```js
@@ -79,3 +83,9 @@ The effect hook lets you perform side effects in functional component. Effect ha
 # Component composition
 
 Smaller components are easier to read, easier to understand and easier to test. A nice rule of thumb **component should not exceed 250 lines under 100 lines is ideal**.
+
+# Strict Mode
+
+React has a new strict mode by wrapping React app with <React.StrictMode> it log additional warnings about legacy features or things that will be soon be deprecated. 
+
+👉 StrictMode renders components twice (on dev but not production) in order to detect any problems with your code and warn you about them (which can be quite useful).
