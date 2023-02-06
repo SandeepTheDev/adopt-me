@@ -15,7 +15,7 @@ To add React in a web page **react** and **react-dom** library is required.
 - **react.development.js** lets you define React component
 - **react-dom.development.js** lets React render HTML element to DOM.
 
-## React.createElement(type, props?, children?)
+### React.createElement(type, props?, children?)
 
 ```js
 const App = () => {
@@ -27,7 +27,7 @@ const App = () => {
 };
 ```
 
-## React.createRoot(container, options?)
+### React.createRoot(container, options?)
 
 **React 18 supports concurrency that helps with state update prioritazation**. `ReactDOM.render` does not support concurrency to use concurrency `ReactDOM.createRoot` is required.
 
