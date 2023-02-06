@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import Details from "./Details.jsx";
-import SearchParams from "./SearchParams.jsx";
+import Details from "./pages/Details";
+import SearchParams from "./pages/SearchParams";
 
 const queryClient = new QueryClient({
   defaultOptions: {
