@@ -119,3 +119,7 @@ return (
   </form>
 );
 ```
+
+# Error Boundaries
+
+Error Boundaries is a React class component that catch Errors anywhere in their child component and display a fallback UI.
