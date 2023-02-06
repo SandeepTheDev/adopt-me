@@ -75,3 +75,7 @@ const setLocation = locationHook[1];
 ## Effect hook `useEffect`
 
 The effect hook lets you perform side effects in functional component. Effect happens after render, React guarantees the DOM has been updated by the time it runs the effects. **By default it runs both after the first render and after every update** `useEffect` can be customize by giving dependencies array.
+
+# Component composition
+
+Smaller components are easier to read, easier to understand and easier to test. A nice rule of thumb **component should not exceed 250 lines under 100 lines is ideal**.
